@@ -10,7 +10,19 @@ The following process helps users reset the parameters in a scheduled report vie
 
 **NOTE:** The process is also needed as a corrective action in case a scheduled report view fails following an update.
 
-> **⚠️ Cognos Analytics 12.1.3+:** If the report view schedule has failed repeatedly, it may have been automatically disabled by the system. Before starting this process, check **Profile → My Activities and Schedules → Auto-Disabled** to see if the schedule is listed there. You will need to re-enable it after correcting the prompt values.
+> **⚠️ Cognos Analytics 12.1.3+: Auto-Disabled Schedules**
+>
+> As of Cognos Analytics 12.1.3, the system can automatically disable report view schedules that fail repeatedly.
+>
+> - A schedule is auto-disabled after a configurable number of consecutive failures. The threshold can be set from **1 to 100** by a report administrator; set to **0** to turn off this feature entirely.
+> - When a schedule is auto-disabled, the system sends an **email notification** so you can investigate and fix the issue.
+> - **Important:** Changing the failure threshold does **not** re-enable a schedule that has already been auto-disabled. You must re-enable it manually.
+>
+> **Before starting this process, check whether your schedule has been auto-disabled:**
+>
+> 1. Go to **Profile → My Activities and Schedules → Auto-Disabled**.
+> 2. If the schedule is listed there, re-enable it using the available actions in the Auto-Disabled view.
+> 3. Then correct the prompt values using the steps below and save the schedule.
 
 ---
 
